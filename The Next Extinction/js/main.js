@@ -17,7 +17,7 @@ window.onload = function() {
     
     function preload() {
         // Load an image and call it 'logo'.
-        game.load.image( 'logo', 'assets/Astroid.png' );
+        game.load.image( 'logo', 'assets/astroid.png' );
         game.load.image('Background', 'assets/Background.png');
         game.load.image('Ending', 'assets/done.png');
         game.load.image('missile', 'assets/Missile3.png');
