@@ -37,6 +37,7 @@ window.onload = function() {
     var blowup
     
     function create() {
+        count = 0;
         game.load.spritesheet('destroy', 'assets/destroy.png', 370, 350, 4);
         earth = game.add.sprite(400, 300, 'destroy');
         blowup = earth.animations.add('blowup');
@@ -132,6 +133,8 @@ window.onload = function() {
     
     function collisionHandler(obj1, obj2){
       background = game.add.tileSprite(0, 0, 800, 600, 'gameover');
+      count = 1;
+      endGame();
     }
     
     function endGame(){
@@ -141,7 +144,9 @@ window.onload = function() {
        m3.destroy();
        m4.destroy();
        m5.destroy();
-       background = game.add.tileSprite(0, 0, 800, 600, 'Ending');
+       if (count === 0){
+          background = game.add.tileSprite(0, 0, 800, 600, 'Ending');
+       }
        earth.animations.play('blowup', 30, true);
     }
     
