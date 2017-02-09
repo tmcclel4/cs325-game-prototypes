@@ -33,14 +33,9 @@ window.onload = function() {
     var m3;
     var m4;
     var m5;
-    var earth
-    var blowup
     
     function create() {
         count = 0;
-        game.load.spritesheet('destroy', 'assets/destroy.png', 370, 350, 4);
-        earth = game.add.sprite(400, 300, 'destroy');
-        blowup = earth.animations.add('blowup');
         //set backround
         background = game.add.tileSprite(0, 0, 800, 600, 'Background'); 
         //add missiles to dodge
@@ -62,7 +57,6 @@ window.onload = function() {
         m5.body.gravity.y = 10;
         
         game.time.events.add(Phaser.Timer.SECOND * 15, endGame, this);
-        //timer1 = new Timer(this);
         timer1 = false;
         
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -118,13 +112,9 @@ window.onload = function() {
         //  Scroll the background
         if (!timer1)
            background.tilePosition.y += 2; //adapted from defender example
-        else{
-           while (background.tilePosition.y != game.world.height)
-               background.tilePosition.y += 2;
-        }
         // Accelerate the 'logo' sprite towards the cursor,
-        // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
-        // in X or Y.
+        // accelerating at 1000 pixels/second and moving no faster than 2000 pixels/second
+        // in X or 500 pixels/second in Y.
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
         astroid.rotation = game.physics.arcade.accelerateToPointer( astroid, this.game.input.activePointer, 1000, 2000, 500 );
@@ -147,11 +137,9 @@ window.onload = function() {
        if (count === 0){
           background = game.add.tileSprite(0, 0, 800, 600, 'Ending');
        }
-       earth.animations.play('blowup', 30, true);
     }
     
     function render(){
-      //game.debug.text("Background height " + background.tilePosition.y, 32, 52);
       game.debug.text("Time until event: " + Math.floor(game.time.events.duration/1000), 32, 32);
     }
   
