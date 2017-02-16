@@ -23,7 +23,7 @@ window.onload = function() {
     
     var button1;
     var button2;
-    var button3;
+    var button3;    
     var button4;
     var button5;
     var background;
@@ -58,7 +58,7 @@ window.onload = function() {
        kidneyCounter = 0;
        skinCounter = 0;
 
-$       background = game.add.tileSprite(0, 0, 800, 600, 'background');
+       background = game.add.tileSprite(0, 0, 800, 600, 'background');
        button1 = game.add.button(40, 100, 'button', heart, this, 2, 1, 0);
        button2 = game.add.button(40, 200, 'button', lungs, this, 2, 1, 0);
        button3 = game.add.button(40, 300, 'button', kidney, this, 2, 1, 0);
