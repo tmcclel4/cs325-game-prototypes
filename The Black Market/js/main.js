@@ -58,7 +58,7 @@ window.onload = function() {
        kidneyCounter = 0;
        skinCounter = 0;
 
-       background = game.add.tileSprite(0, 0, 800, 600, 'background');
+$       background = game.add.tileSprite(0, 0, 800, 600, 'background');
        button1 = game.add.button(40, 100, 'button', heart, this, 2, 1, 0);
        button2 = game.add.button(40, 200, 'button', lungs, this, 2, 1, 0);
        button3 = game.add.button(40, 300, 'button', kidney, this, 2, 1, 0);
@@ -105,7 +105,7 @@ window.onload = function() {
       else{
         background.visible = false;
         var style = { font: "25px Verdana", fill: "#22aaff", align: "center" };
-        var text = game.add.text( 200, 100, "Your total revenue was: "+money, style );
+        var text = game.add.text( 200, 100, "Your total revenue was: $"+money, style );
       }
     }
     
