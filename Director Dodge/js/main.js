@@ -13,7 +13,7 @@ window.onload = function() {
     
     "use strict";
     
-  var game = new Phaser.Game( 800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update, render: render } );
+  var game = new Phaser.Game( 800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update} );
     
     function preload() {
         game.load.image( 'bubble', 'assets/chat_bubble.png' );
@@ -155,13 +155,6 @@ window.onload = function() {
 
     }
     
-    function render(){
-      game.debug.text("up: " + counter, 40, 575);
-//     game.debug.text("up: " + answers, 40, 475);
-//      game.debug.text("up: " + puzzle, 40, 375);
-//      game.debug.text("up: " + start, 200, 275);
-
-    }
 
     function puzzle1() {
          start = true;
