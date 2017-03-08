@@ -22,6 +22,7 @@ window.onload = function() {
         game.load.image( 'sell', 'assets/sell_button.png' );
         game.load.image( 'background', 'assets/background.png' );
         game.load.image( 'background2', 'assets/endgame2.png' );
+        //Music courtesy of William Crosswait and Nathan Ramey
         game.load.audio( 'music', 'assets/VGP 4.wav');
     }
     
