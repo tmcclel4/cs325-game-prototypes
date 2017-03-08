@@ -22,7 +22,7 @@ window.onload = function() {
         game.load.image( 'sell', 'assets/sell_button.png' );
         game.load.image( 'background', 'assets/background.png' );
         game.load.image( 'background2', 'assets/endgame2.png' );
-        game.load.audio( 'music', 'assets/music.mp3');
+        game.load.audio( 'music', 'assets/VGP 4.wav');
     }
     
     var button1;
