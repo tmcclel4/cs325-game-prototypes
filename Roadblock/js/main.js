@@ -33,16 +33,10 @@ window.onload = function() {
     
 
     function preload() {
-
-        // Load an image and call it 'logo'.
-
+        
         game.load.image( 'logo', 'assets/astroid.png' );
-
-        game.load.image('Background', 'assets/Road.png');
-
+        game.load.image('Background', 'assets/road.png');
         game.load.image('Ending', 'assets/done.png');
-
-        game.load.image('missile', 'assets/Missile3.png');
         game.load.image('chevy', 'assets/chevy.png');
         game.load.image('chevy2', 'assets/suburban.png');
         game.load.image('ferrari', 'assets/ferrari.png');
@@ -61,7 +55,6 @@ window.onload = function() {
     var car2;
     var car3;
     var car4;
-
     var car1Throttle;
     var car2Throttle;
     var car3Throttle;
@@ -85,12 +78,7 @@ window.onload = function() {
         counter = 0;
 
         //set backround
-       // explosion = game.add.sprite(200, 360, 'explosions', 23);
-
-
         background = game.add.tileSprite(0, 0, 1000, 750, 'Background'); 
-
-        //add missiles to dodge
 
         car1 = game.add.sprite(475, 0, 'chevy');        
         car2 = game.add.sprite(445, 685, 'chevy2');       
@@ -105,7 +93,7 @@ window.onload = function() {
 
         style = { font: "25px Verdana", fill: "#000000", align: "right" };
         end = false;
-        
+       
 
     }
 
@@ -127,7 +115,6 @@ window.onload = function() {
             text.anchor.setTo( 0.5, 0.0 );
             break;
           case 2:
-            Phaser.Text.destroy;
             //Top car throttle
             if (car1 != null){
               if (car1Throttle.isDown){
@@ -195,7 +182,6 @@ window.onload = function() {
                   car4.body.velocity.x = -100;
                 }
               }
-              break;
             }
         }
       }
