@@ -282,7 +282,7 @@ window.onload = function() {
     function endGame(){     
        if (car1 == null && car2 == null && car3 == null && car4 == null)
          counter = 7;
-       if (!end)
+       if (!end){  
             switch(counter){
                case 0:
                   text = game.add.text( 15, 50, "You all win!", style );
