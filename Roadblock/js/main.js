@@ -279,35 +279,37 @@ window.onload = function() {
 
     
 
-    function endGame(){
-      end = true;     
+    function endGame(){     
        if (car1 == null && car2 == null && car3 == null && car4 == null)
          counter = 7;
-       switch(counter){
-         case 0:
-           text = game.add.text( 15, 50, "You all win!", style );
-           break;
-         case 1:
-           text = game.add.text( 15, 50, "Players 3 and 4 win!", style );
-           break;
-         case 2:
-           text = game.add.text( 15, 50, "Players 2 and 4 win!", style );
-           break;
-         case 3:  
-           text = game.add.text( 15, 50, "Players 2 and 3 win!", style );
-           break;
-         case 4:
-           text = game.add.text( 15, 50, "Players 1 and 4 win!", style );
-           break;
-         case 5:
-           text = game.add.text( 15, 50, "Players 1 and 3 win!", style );
-           break;
-         case 6:
-           text = game.add.text( 15, 50, "Players 1 and 2 win!", style );
-           break;
-         default:
-           text = game.add.text( 15, 50, "You all lose!", style );
-       }
+       if (!end)
+            switch(counter){
+               case 0:
+                  text = game.add.text( 15, 50, "You all win!", style );
+                  break;
+               case 1:
+                  text = game.add.text( 15, 50, "Players 3 and 4 win!", style );
+                  break;
+               case 2:
+                  text = game.add.text( 15, 50, "Players 2 and 4 win!", style );
+                  break;
+               case 3:  
+                  text = game.add.text( 15, 50, "Players 2 and 3 win!", style );
+                  break;
+               case 4:
+                  text = game.add.text( 15, 50, "Players 1 and 4 win!", style );
+                  break;
+               case 5:
+                  text = game.add.text( 15, 50, "Players 1 and 3 win!", style );
+                  break;
+               case 6:
+                  text = game.add.text( 15, 50, "Players 1 and 2 win!", style );
+                  break;
+               default:
+                  text = game.add.text( 15, 50, "You all lose!", style );
+           }
+        }
+        end = true;
 
     }
 
